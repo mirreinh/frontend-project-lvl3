@@ -8,6 +8,14 @@ const __dirname = path.dirname(__filename);
 
 export default {
   mode: process.env.NODE_ENV || 'development',
+  devServer: {
+    historyApiFallback: true,
+    contentBase: path.resolve(__dirname, './dist'),
+    open: true,
+    compress: true,
+    hot: true,
+    port: 8080,
+  },
   entry: {
     main: path.resolve(__dirname, './src/index.js'),
   },
@@ -23,5 +31,7 @@ export default {
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [new HtmlWebpackPlugin({
+    template: 'template.html',
+  })],
 };
