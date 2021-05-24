@@ -19,10 +19,12 @@
   },
   "homepage": "https://github.com/mirreinh/frontend-project-lvl3#readme",
   "devDependencies": {
+    "css-loader": "^5.2.5",
     "eslint": "^7.26.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.2",
     "html-webpack-plugin": "^5.3.1",
+    "style-loader": "^2.0.0",
     "webpack": "^5.37.1",
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2"
