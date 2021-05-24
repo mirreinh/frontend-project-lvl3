@@ -1,4 +1,3 @@
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/mirreinh/frontend-project-lvl3/workflows/hexlet-check/badge.svg)](https://github.com/mirreinh/frontend-project-lvl3/actions)
-[![Node CI](https://github.com/mirreinh/frontend-project-lvl3/actions/workflows/node_ci.yml/badge.svg)](https://github.com/mirreinh/frontend-project-lvl3/actions/workflows/node_ci.yml)](https://github.com/mirreinh/frontend-project-lvl3/actions)
+[![hexlet-check](https://github.com/mirreinh/frontend-project-lvl3/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/mirreinh/frontend-project-lvl3/actions/workflows/hexlet-check.yml)
+[![node-ci](https://github.com/mirreinh/frontend-project-lvl3/actions/workflows/node_ci.yml/badge.svg)](https://github.com/mirreinh/frontend-project-lvl3/actions/workflows/node_ci.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/b1b1a3e60749b16a711d/maintainability)](https://codeclimate.com/github/mirreinh/frontend-project-lvl3/maintainability)
