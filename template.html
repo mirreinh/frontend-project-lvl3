@@ -40,9 +40,9 @@
             <p class="lead">
               Начните читать RSS сегодня! Это легко, это красиво.
             </p>
-            <form class="rss-form">
+            <form action class="rss-form">
               <div class="mb-3">
-                <input
+                <input autofocus required
                   type="text"
                   name="url"
                   aria-label="url"
@@ -64,6 +64,7 @@
                 </button>
               </div>
             </form>
+            <div class="feedback"></div>
           </div>
         </div>
       </div>
@@ -73,10 +74,10 @@
         </div>
         <div class="row">
           <div class="col-md-10 col-lg-8 mx-auto topics">
-            <div class="data-container update-feedback mt-3"></div>
+            <!-- <div class="data-container update-feedback mt-3"></div> -->
           </div>
         </div>
-      </div>
+      </section>
     </main>
     <footer class="footer mt-auto bg-light border-top">
       <div class="container p-3 text-center">
