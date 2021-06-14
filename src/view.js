@@ -26,6 +26,7 @@ const renderParserErrors = (elements, errors) => {
 
 const renderFeeds = (elements, feeds) => {
   const { feedContainer } = elements;
+  feedContainer.innerHTML = '';
   const h2El = document.createElement('h2');
   h2El.textContent = 'Фиды';
   feedContainer.append(h2El);
@@ -47,21 +48,29 @@ const renderFeeds = (elements, feeds) => {
 
 const renderPosts = (elements, posts) => {
   const { topicsContainer } = elements;
+  topicsContainer.innerHTML = '';
   const h2El = document.createElement('h2');
   h2El.textContent = 'Посты';
   topicsContainer.append(h2El);
   const ulEl = document.createElement('ul');
   ulEl.classList.add('list-group');
-  posts.forEach(({ postTitle, postDescription, postLink }) => {
+  posts.forEach(({ postTitle, postLink, id }) => {
+    const button = document.createElement('BUTTON');
+    button.classList.add('btn', 'btn-outline-primary', 'btn-sm');
+    button.dataset.id = id;
+    button.dataset.bsToggle = 'modal';
+    button.dataset.bsTarget = '#modal';
+    button.textContent = 'Просмотр';
     const liEl = document.createElement('li');
     liEl.classList.add('list-group-item', 'd-flex', 'justify-content-between');
     const aEl = document.createElement('a');
-    aEl.id = 1;
+    aEl.id = id;
     aEl.href = postLink;
     aEl.target = '_blank';
     aEl.classList.add('fw-normal');
     aEl.textContent = postTitle;
     liEl.append(aEl);
+    liEl.append(button);
     ulEl.append(liEl);
   });
   topicsContainer.append(ulEl);

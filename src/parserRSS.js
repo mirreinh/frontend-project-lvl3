@@ -10,13 +10,13 @@ export default (content, state) => {
   const title = parserData.querySelector('title').textContent;
   const description = parserData.querySelector('description').textContent;
   const posts = parserData.querySelectorAll('item');
-  const id = _.uniqueId();
-  state.feeds.unshift({ title, description, id });
+  state.feeds.unshift({ title, description });
 
   const arrayPosts = Array.from(posts).map((post) => {
     const postTitle = post.querySelector('title').textContent;
     const postDescription = post.querySelector('description').textContent;
     const postLink = post.querySelector('link').textContent;
+    const id = _.uniqueId();
     return {
       postTitle, postDescription, postLink, id,
     };
